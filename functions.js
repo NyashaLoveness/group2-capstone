@@ -8,6 +8,7 @@ window.addEventListener("load", function () {
     document.getElementById('pathDir').style.display = 'none';
     document.getElementById('menu').style.display = 'none';
     document.getElementById('contentBox').style.display = 'none';
+    
 })
 
 function login() {

@@ -3,6 +3,17 @@
     height: 30em;
     width: 55em;
 }
+#passwd{
+    margin-left: 0.4em;
+}
+.loginBtn{
+    margin-left: 23em;
+    border: 0px solid;
+}
+#lbl4{
+    margin-left: 15em;
+    margin-top: 1.8em;
+}
 
 .header{
     background-color: white;
@@ -86,6 +97,13 @@
     border-bottom: 2px solid black;
 }
 
+.table{
+    margin-left: 2.5em;
+}
+#tblJ, #tblCoord{
+    margin-left: 11.5em;
+}
+
 .pipe_data{
     margin-left: 10em;
     background-color: rgba(111, 167, 245, 1);
@@ -100,13 +118,14 @@
 
 
 .content{
-    height: 19.2em;
+    height: 19.8em;
     background-color: rgba(111, 167, 245, 1);
     margin-left: 10em;
     margin-right: 1em;
     width: 43em;
     border-bottom-right-radius: 1em;
     border-bottom-left-radius: 1em;
+    overflow-y: auto;
 }
 
 ::-webkit-scrollbar {
