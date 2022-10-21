@@ -7,7 +7,7 @@
     <title>Document</title>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css">
     <script><?php require_once("functions.js");?></script>
-    <link rel="stylesheet" type="text/css" href="data.css?t=<?=filemtime('data.css')?>" />
+    <link rel="stylesheet" type="text/css" href="data.css?t=<?=filemtime('data.css')?>"/>
 
 </head>
 <body>
@@ -73,23 +73,23 @@
                 <tbody id ='table_body' class = 'text-center'>
                     <?php
                     //Get Heroku ClearDB connection information
-                    // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-                    // $cleardb_server = $cleardb_url["host"];
-                    // $cleardb_username = $cleardb_url["user"];
-                    // $cleardb_password = $cleardb_url["pass"];
-                    // $cleardb_db = substr($cleardb_url["path"],1);
-                    // $active_group = 'default';
-                    // $query_builder = TRUE;
-                    // // Connect to DB
-                    // $connection = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+                    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+                    $cleardb_server = $cleardb_url["host"];
+                    $cleardb_username = $cleardb_url["user"];
+                    $cleardb_password = $cleardb_url["pass"];
+                    $cleardb_db = substr($cleardb_url["path"],1);
+                    $active_group = 'default';
+                    $query_builder = TRUE;
+                    // Connect to DB
+                    $connection = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
             
-                    $servername = 'localhost';
-                    $username = 'root';
-                    $password = '';
-                    $database = 'leaks.db';
+                    // $servername = 'localhost';
+                    // $username = 'root';
+                    // $password = '';
+                    // $database = 'leaks.db';
 
-                    //create connection
-                    $connection = new mysqli($servername, $username, $password, $database);
+                    // //create connection
+                    // $connection = new mysqli($servername, $username, $password, $database);
 
                     //check if connection is established correctly
                     if ($connection -> connect_error){
@@ -133,23 +133,23 @@
                 <tbody id='table_body4' class = 'text-center'>
                 <?php
                     //Get Heroku ClearDB connection information
-                    // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-                    // $cleardb_server = $cleardb_url["host"];
-                    // $cleardb_username = $cleardb_url["user"];
-                    // $cleardb_password = $cleardb_url["pass"];
-                    // $cleardb_db = substr($cleardb_url["path"],1);
-                    // $active_group = 'default';
-                    // $query_builder = TRUE;
-                    // // Connect to DB
-                    // $connection = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+                    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+                    $cleardb_server = $cleardb_url["host"];
+                    $cleardb_username = $cleardb_url["user"];
+                    $cleardb_password = $cleardb_url["pass"];
+                    $cleardb_db = substr($cleardb_url["path"],1);
+                    $active_group = 'default';
+                    $query_builder = TRUE;
+                    // Connect to DB
+                    $connection = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
                     
-                    $servername = 'localhost';
-                    $username = 'root';
-                    $password = '';
-                    $database = 'leaks.db';
+                    // $servername = 'localhost';
+                    // $username = 'root';
+                    // $password = '';
+                    // $database = 'leaks.db';
 
-                    //create connection
-                    $connection = new mysqli($servername, $username, $password, $database);
+                    // //create connection
+                    // $connection = new mysqli($servername, $username, $password, $database);
 
                     //check if connection is established correctly
                     if ($connection -> connect_error){
@@ -188,23 +188,23 @@
                 <tbody id='table_body4' class = 'text-center trow'>
                 <?php
                     //Get Heroku ClearDB connection information
-                    // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
-                    // $cleardb_server = $cleardb_url["host"];
-                    // $cleardb_username = $cleardb_url["user"];
-                    // $cleardb_password = $cleardb_url["pass"];
-                    // $cleardb_db = substr($cleardb_url["path"],1);
-                    // $active_group = 'default';
-                    // $query_builder = TRUE;
-                    // // Connect to DB
-                    // $connection = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
+                    $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
+                    $cleardb_server = $cleardb_url["host"];
+                    $cleardb_username = $cleardb_url["user"];
+                    $cleardb_password = $cleardb_url["pass"];
+                    $cleardb_db = substr($cleardb_url["path"],1);
+                    $active_group = 'default';
+                    $query_builder = TRUE;
+                    // Connect to DB
+                    $connection = mysqli_connect($cleardb_server, $cleardb_username, $cleardb_password, $cleardb_db);
                     
-                    $servername = 'localhost';
-                    $username = 'root';
-                    $password = '';
-                    $database = 'leaks.db';
+                    // $servername = 'localhost';
+                    // $username = 'root';
+                    // $password = '';
+                    // $database = 'leaks.db';
 
-                    //create connection
-                    $connection = new mysqli($servername, $username, $password, $database);
+                    // //create connection
+                    // $connection = new mysqli($servername, $username, $password, $database);
 
                     //check if connection is established correctly
                     if ($connection -> connect_error){
