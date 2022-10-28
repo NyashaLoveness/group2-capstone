@@ -22,7 +22,7 @@
     <div class='main-cont'>
         <div class='content-cont'>
             <div class='sidebar'>
-                <button class='homeBtn'>Home</button>
+                <button class='homeBtn' onclick='showHome()'>Home</button>
                 <button class='workBtn'>Work orders</button>
                 <button class='settingsBtn'>Settings</button>
                 <button class='logoutBtn'>Logout</button>
@@ -30,7 +30,21 @@
 
             <div id='topbar'>Welcome back!</div>
 
-            <button id='opsBtn' onclick='showOpsData()'><img class='icon1' src="oprations.png">Operational data</button>
+            <!-- <button id='opsBtn' onclick='showOpsData()'>System layout</button> -->
+            <button id='gaugesBtn' onclick='showGauges()'>Pressure gauges</button>
+            <button id='layoutBtn' onclick='showLayout()'>System layout</button>
+
+
+            <div id = 'layout' >
+                <div style="position: fixed; padding-bottom: 60%; padding-top: 0; height: 0;">
+                    <iframe title="Hanoi layout" frameborder="0" width="700" height="600"
+                        style="position: fixed; top: 20; left: 20; width: 65%; height: 65%;"
+                        src="https://view.genial.ly/63599eea84f06e00183b2ac3" type="text/html"
+                        allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all">
+                    </iframe>
+                </div>
+            </div>
+
 
             <!-- <div id = 'JnC'> -->
             <div id='junctionsBox' class='content table-responsive"'>

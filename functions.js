@@ -1,15 +1,10 @@
 window.addEventListener("load", function () {
-    document.getElementById('opsBtn').style.display = 'block';
+    document.getElementById('layoutBtn').style.display = 'inline';
+    document.getElementById('gaugesBtn').style.display = 'inline';
     document.getElementById('pipesBox').style.display = 'none';
     document.getElementById('junctionsBox').style.display = 'none';
     document.getElementById('coordsBox').style.display = 'none';
-    // document.getElementById('tbl').style.display = 'none';
-    // document.getElementById('tblCoord').style.display = 'none';
-    // document.getElementById('settingsPg').style.display = 'none';
-    // document.getElementById('box').style.display = 'none';
-    // document.getElementById('pathDir').style.display = 'none';
-    // document.getElementById('menu').style.display = 'none';
-    // document.getElementById('contentBox').style.display = 'none';
+    document.getElementById('layout').style.display = 'none';
     
 })
 
@@ -80,11 +75,29 @@ window.addEventListener("load", function () {
     
 // }   
 
-function showOpsData(){
+function showGauges(){
     document.getElementById('topbar').innerHTML = 'Operational data';
     document.getElementById('opsBtn').style.display = 'none';
     document.getElementById('pipesBox').style.display = 'block';
     // document.getElementById('JnC').style.display = 'block';
     document.getElementById('junctionsBox').style.display = 'block';
     document.getElementById('coordsBox').style.display = 'block';
+}
+
+function showLayout(){
+    document.getElementById('topbar').innerHTML = 'System layout';
+    document.getElementById('gaugesBtn').style.display = 'none';
+    document.getElementById('layoutBtn').style.display = 'none';
+    document.getElementById('layout').style.display = 'block';
+}
+
+function showHome(){
+    document.getElementById('layoutBtn').style.display = 'inline';
+    document.getElementById('gaugesBtn').style.display = 'inline';
+    document.getElementById('pipesBox').style.display = 'none';
+    document.getElementById('junctionsBox').style.display = 'none';
+    document.getElementById('coordsBox').style.display = 'none';
+    document.getElementById('layout').style.display = 'none';
+    document.getElementById('topbar').innerHTML = 'Welcome back!';
+    
 }

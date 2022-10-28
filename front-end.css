@@ -44,25 +44,41 @@
 #topbar{
     font-family: 'Lora', serif;
     background-color: rgb(234, 234, 236);
-    margin-top: -15em;
+    margin-top: -13em;
     margin-left: 20%;
     font-weight: 600;
     font-size: 40px;
 }
 
-#opsBtn{
-    margin-left: 25em;
+#layoutBtn, #gaugesBtn{
     border: none;
     height: 7em;
     width: 12em;
     box-shadow: 0px 0px 6px 0px grey;
     background-color: white;
-    margin-top: 8em;
     font-family: 'Lora', serif;
     font-size: 15px;
     font-weight: 600;
     border-radius: 1em;
+    outline: none;
 }
+#gaugesBtn{
+    margin-left: 25em;
+    margin-top: 7em; 
+}
+#layoutBtn{
+    margin-left: 5em;
+}
+
+#layoutBtn:hover, #gaugesBtn:hover {
+    background-color: rgb(234, 234, 236);
+}
+
+#layout{
+    margin-left: 20%;
+}
+
+
 .icon1{
     height: 3em;
     width: 3em;
