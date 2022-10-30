@@ -34,31 +34,31 @@
             <button id='gaugesBtn' onclick='showGauges()'>Pressure gauges</button>
             <button id='layoutBtn' onclick='showLayout()'>System layout</button>
 
+            <div id='layout' style="position: relative; height: 75%;">
+                <iframe title="Hanoi layout" frameborder="0"
+                    style="position: absolute; margin-top: 10; left: 20; width: 80%; height: 100%;"
+                    src="https://view.genial.ly/63599eea84f06e00183b2ac3" type="text/html" allowscriptaccess="always"
+                    allowfullscreen="false" scrolling="no" allownetworking="all">
+                </iframe>
 
-            <div id = 'layout' >
-                <div style="position: fixed; padding-bottom: 60%; padding-top: 0; height: 0;">
-                    <iframe title="Hanoi layout" frameborder="0" width="700" height="600"
-                        style="position: fixed; top: 20; left: 20; width: 65%; height: 65%;"
-                        src="https://view.genial.ly/63599eea84f06e00183b2ac3" type="text/html"
-                        allowscriptaccess="always" allowfullscreen="true" scrolling="yes" allownetworking="all">
-                    </iframe>
-                </div>
             </div>
 
+            <a id = 'link' href="#allTbls" onclick = 'showTbls()'>View tables instead?</a>
 
-            <!-- <div id = 'JnC'> -->
-            <div id='junctionsBox' class='content table-responsive"'>
-                <table id='tblJ' class="table table table-sm table table-hover tblJ">
-                    <thead class="thead-light text-center">
-                        <tr>
-                            <th scope="col" class='text-center'>ID</th>
-                            <th scope="col" class='text-center'>Elevation</th>
-                            <th scope="col" class='text-center'>Demand</th>
-                            <th scope="col" class='text-center'>Pattern</th>
-                        </tr>
-                    </thead>
-                    <tbody id='table_body4' class='text-center'>
-                        <?php
+            <div id='allTbls'>
+                <div id='JnC'>
+                    <div id='junctionsBox' class='content table-responsive"'>
+                        <table id='tblJ' class="table table table-sm table table-hover tblJ">
+                            <thead class="thead-light text-center">
+                                <tr>
+                                    <th scope="col" class='text-center'>ID</th>
+                                    <th scope="col" class='text-center'>Elevation</th>
+                                    <th scope="col" class='text-center'>Demand</th>
+                                    <th scope="col" class='text-center'>Pattern</th>
+                                </tr>
+                            </thead>
+                            <tbody id='table_body4' class='text-center'>
+                                <?php
                                 //Get Heroku ClearDB connection information
                                 // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
                                 // $cleardb_server = $cleardb_url["host"];
@@ -101,21 +101,21 @@
                                     </tr>";
                                 }
                             ?>
-                    </tbody>
-                </table>
-            </div>
+                            </tbody>
+                        </table>
+                    </div>
 
-            <div id='coordsBox' class='content table-responsive"'>
-                <table id='tblCoord' class="table table table-sm table table-hover tblCoord">
-                    <thead class="thead-light text-center">
-                        <tr>
-                            <th scope="col" class='text-center'>Node</th>
-                            <th scope="col" class='text-center'>X-coordinate</th>
-                            <th scope="col" class='text-center'>Y-coordinate</th>
-                        </tr>
-                    </thead>
-                    <tbody id='table_body4' class='text-center trow'>
-                        <?php
+                    <div id='coordsBox' class='content table-responsive"'>
+                        <table id='tblCoord' class="table table table-sm table table-hover tblCoord">
+                            <thead class="thead-light text-center">
+                                <tr>
+                                    <th scope="col" class='text-center'>Node</th>
+                                    <th scope="col" class='text-center'>X-coordinate</th>
+                                    <th scope="col" class='text-center'>Y-coordinate</th>
+                                </tr>
+                            </thead>
+                            <tbody id='table_body4' class='text-center trow'>
+                                <?php
                                 //Get Heroku ClearDB connection information
                                 // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
                                 // $cleardb_server = $cleardb_url["host"];
@@ -157,27 +157,27 @@
                                 </tr>";
                                 }
                             ?>
-                    </tbody>
-                </table>
-            </div>
-            <!-- </div> -->
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
 
-            <div id='pipesBox' class='content table-responsive"'>
-                <table id='tbl' class="table table table-sm table table-hover">
-                    <thead id='tblHead' class="thead-light text-center">
-                        <tr>
-                            <th scope="col" class='text-center'>ID</th>
-                            <th scope="col" class='text-center'>Node 1</th>
-                            <th scope="col" class='text-center'>Node 2</th>
-                            <th scope="col" class='text-center'>Length</th>
-                            <th scope="col" class='text-center'>Diameter</th>
-                            <th scope="col" class='text-center'>Roughness</th>
-                            <th scope="col" class='text-center'>Minor loss</th>
-                            <th scope="col" class='text-center'>Status</th>
-                        </tr>
-                    </thead>
-                    <tbody id='table_body' class='text-center'>
-                        <?php
+                <div id='pipesBox' class='content table-responsive"'>
+                    <table id='tbl' class="table table table-sm table table-hover">
+                        <thead id='tblHead' class="thead-light text-center">
+                            <tr>
+                                <th scope="col" class='text-center'>ID</th>
+                                <th scope="col" class='text-center'>Node 1</th>
+                                <th scope="col" class='text-center'>Node 2</th>
+                                <th scope="col" class='text-center'>Length</th>
+                                <th scope="col" class='text-center'>Diameter</th>
+                                <th scope="col" class='text-center'>Roughness</th>
+                                <th scope="col" class='text-center'>Minor loss</th>
+                                <th scope="col" class='text-center'>Status</th>
+                            </tr>
+                        </thead>
+                        <tbody id='table_body' class='text-center'>
+                            <?php
                         //Get Heroku ClearDB connection information
                         // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
                         // $cleardb_server = $cleardb_url["host"];
@@ -224,9 +224,11 @@
                         </tr>";
                         }
                         ?>
-                    </tbody>
-                </table>
+                        </tbody>
+                    </table>
+                </div>
             </div>
+
 
 
         </div>

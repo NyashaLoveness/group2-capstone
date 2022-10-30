@@ -34,16 +34,6 @@ window.addEventListener("load", function () {
 // }
 
 
-
-// function tablesShow() { //show Junctions table
-//     document.getElementById('pathDir').textContent = 'Home > Junctions';
-//     document.getElementById('heading').textContent = 'Junctions';
-//     document.getElementById('tblJ').style.display = 'block';
-//     document.getElementById('tbl').style.display = 'none';
-//     document.getElementById('tblCoord').style.display = 'none';
-//     document.getElementById('settingsPg').style.display = 'none';
-// };
-
 // function coordsShow() { //show the coordinates table
 //     document.getElementById('pathDir').textContent = 'Home > Coordinates';
 //     document.getElementById('heading').textContent = 'Coordinates';
@@ -101,3 +91,10 @@ function showHome(){
     document.getElementById('topbar').innerHTML = 'Welcome back!';
     
 }
+
+function showTbls() { 
+    document.getElementById('topbar').innerHTML = 'System data';
+    document.getElementById('allTbls').style.display = 'block';
+    document.getElementById('layout').style.display = 'none';
+    document.getElementById('link').style.display = 'none';
+};
