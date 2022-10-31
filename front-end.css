@@ -56,7 +56,7 @@
     padding-left: 0.5em;
 }
 
-#layoutBtn, #opsBtn, #ordersBtn{
+#layoutBtn, #opsBtn, #ordersBtn, #nodesBtn{
     border: none;
     height: 7em;
     width: 12em;
@@ -73,13 +73,19 @@
     margin-top: 7em; 
     font-family: 'Lora', serif;
 }
-#layoutBtn{
+#nodesBtn{
     margin-left: 5em;
+    margin-top: 7em; 
     font-family: 'Lora', serif;
 }
+#layoutBtn{
+    margin-left: 30em;
+    font-family: 'Lora', serif;
+    margin-top: 1em;
+}
 #ordersBtn{
-    margin-left: 37em;
-    margin-top: 2em; 
+    margin-left: 5em;
+    margin-top: 1em; 
     font-family: 'Lora', serif;
 }
 
@@ -200,6 +206,11 @@
     width: 5em;
     margin-right: 1.7em;
 }
+#nodesImg{
+    margin-left: 2.6em;
+    width: 5em;
+    margin-right: 1.7em;
+}
 
 #submit, #cancel{
     outline: none;
@@ -215,6 +226,12 @@
     font-weight: 600;
     border-radius: 1em;
     margin-right: 1em;
+}
+
+#nodes{
+    margin-top: -31em;
+    margin-left: 15%;
+    height: 78.7%;
 }
 
 ::-webkit-scrollbar {

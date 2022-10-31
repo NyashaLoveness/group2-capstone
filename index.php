@@ -23,18 +23,23 @@
         <div class='content-cont'>
             <div class='sidebar'>
                 <button class='homeBtn' onclick='showHome()'>Home</button>
-                <button class='settingsBtn' onclick = 'settingsShow()'>Settings</button>
+                <button class='settingsBtn' onclick='settingsShow()'>Settings</button>
                 <button class='logoutBtn'>Logout</button>
             </div>
 
             <div id='topbar'>Welcome back!</div>
 
-            <button id='opsBtn' onclick='opsData()'><img id = 'analytics' src = 'icons8-analytics-58.png'>Operational Data</button>
-            <button id='layoutBtn' onclick='showLayout()'><img id = 'sys' src = 'icons8-imac-settings-50.png'>System Layout</button>
-            <button id='ordersBtn' onclick='ordersPg()'><img id = 'order' src = 'icons8-engineer-64.png'>Work Orders</button>
+            <button id='opsBtn' onclick='opsData()'><img id='analytics' src='icons8-analytics-58.png'>Operational
+                Data</button>
+            <button id='nodesBtn' onclick='nodesData()'><img id='nodesImg' src='icons8-trend-chart-64.png'>Nodes Trend
+                Analysis</button>
+            <button id='layoutBtn' onclick='showLayout()'><img id='sys' src='icons8-imac-settings-50.png'>System
+                Layout</button>
+            <button id='ordersBtn' onclick='ordersPg()'><img id='order' src='icons8-engineer-64.png'>Work
+                Orders</button>
 
             <div id='layout' style="position: relative; height: 75%;">
-                <iframe id = 'iframe' title="Hanoi layout" frameborder="0"
+                <iframe id='iframe' title="Hanoi layout" frameborder="0"
                     style="position: absolute; margin-top: 10; left: 20; width: 80%; height: 100%;"
                     src="https://view.genial.ly/63599eea84f06e00183b2ac3" type="text/html" allowscriptaccess="always"
                     allowfullscreen="false" scrolling="no" allownetworking="all">
@@ -229,8 +234,8 @@
 
             <div id='settingsPg'>
                 <button id='acc'>Account information</button><br>
-                    <button id='profile'>Profile</button><br>
-                    <button id='notifs'>Notifications</button><br>
+                <button id='profile'>Profile</button><br>
+                <button id='notifs'>Notifications</button><br>
                 <button id='support' onclick='opsData()'>Support</button><br>
                 <button id='terms' onclick='opsData()'>Terms and privacy</button><br>
             </div>
@@ -249,8 +254,8 @@
                     <label for="details">Details</label><br>
                     <input type="text" id="details" name='details'><br>
 
-                    <button id = 'submit' type="submit">Add</button>
-                    <button id = 'cancel' type="cancel">Cancel</button>
+                    <button id='submit' type="submit">Add</button>
+                    <button id='cancel' type="cancel">Cancel</button>
                 </form>
             </div>
 
@@ -276,6 +281,12 @@
                 <iframe src="https://mpho-godfrey-nkadimeng.shinyapps.io/capstone/" height='100%' width='100%'
                     style="border:none;">
 
+                </iframe>
+            </div>
+
+            <div id='nodes'>
+                <iframe src="https://mpho-godfrey-nkadimeng.shinyapps.io/App1/" height='100%' width='100%'
+                    style="border:none;">
                 </iframe>
             </div>
 

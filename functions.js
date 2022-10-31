@@ -12,6 +12,8 @@ window.addEventListener("load", function () {
     document.getElementById('iframe').style.display = 'none';
     document.getElementById('tblJ').style.display = 'none';
     document.getElementById('settingsPg').style.display = 'none';
+    document.getElementById('nodesBtn').style.display = 'inline';
+    document.getElementById('nodes').style.display = 'none';
     
 })
 
@@ -28,6 +30,8 @@ function showHome(){
     document.getElementById('settingsPg').style.display = 'none';
     document.getElementById('link').style.display = 'none';
     document.getElementById('ops').style.display = 'none';
+    document.getElementById('nodesBtn').style.display = 'inline';
+    document.getElementById('nodes').style.display = 'none';
 }
 
 function ordersPg() {
@@ -45,33 +49,10 @@ function ordersPg() {
     document.getElementById('ordersBtn').style.display = 'none';
     document.getElementById('CRUD').style.display = 'block';
     document.getElementById('settingsPg').style.display = 'none';
+    document.getElementById('nodesBtn').style.display = 'none';
+    document.getElementById('nodes').style.display = 'none';
 
 }
-
-// function login() {
-//     var usernm = document.getElementById('name').value;
-//     var passwd = document.getElementById('passwd').value;
-
-//     if (usernm == 'Bob' && passwd == 'operator01') {
-//         alert('login successful');
-//         function pipesShow() {
-//             document.getElementById('loginPg').style.display = 'none';
-//             document.getElementById('pathDir').textContent = 'Home > Pipe metadata';
-//             document.getElementById('heading').textContent = 'Pipe metadata';
-//             document.getElementById('tblJ').style.display = 'none';
-//             document.getElementById('tbl').style.display = 'block';
-//             document.getElementById('tblCoord').style.display = 'none';
-//             document.getElementById('box').style.display = 'block';
-//             document.getElementById('settingsPg').style.display = 'none';
-//             document.getElementById('pathDir').style.display = 'block';
-//             document.getElementById('menu').style.display = 'block';
-//             document.getElementById('contentBox').style.display = 'block';
-//         }
-// } else {
-//     alert('Oops, try again!')
-// }
-// pipesShow()
-// }
 
 function settingsShow() {
     document.getElementById('topbar').innerHTML = 'settings';
@@ -89,6 +70,8 @@ function settingsShow() {
     document.getElementById('ordersForm').style.display = 'none';
     document.getElementById('settingsPg').style.display = 'block';
     document.getElementById('acc').style.display = 'block';
+    document.getElementById('nodesBtn').style.display = 'none';
+    document.getElementById('nodes').style.display = 'none';
     
 }   
 
@@ -100,6 +83,9 @@ function showLayout(){
     document.getElementById('settingsPg').style.display = 'none';
     document.getElementById('layout').style.display = 'block';
     document.getElementById('link').style.display = 'block';
+    document.getElementById('iframe').style.display = 'block';
+    document.getElementById('nodesBtn').style.display = 'none';
+    document.getElementById('nodes').style.display = 'none';
 }
 
 
@@ -112,6 +98,8 @@ function showTbls() {
     document.getElementById('coordsBox').style.display = 'block';
     document.getElementById('settingsPg').style.display = 'none';
     document.getElementById('tblJ').style.display = 'block';
+    document.getElementById('nodesBtn').style.display = 'none';
+    document.getElementById('nodes').style.display = 'none';
 };
 
 function opsData(){
@@ -128,4 +116,24 @@ function opsData(){
     document.getElementById('ops').style.display = 'block';
     document.getElementById('settingsPg').style.display = 'none';
     document.getElementById('ordersBtn').style.display = 'none';
+    document.getElementById('nodesBtn').style.display = 'none';
+    document.getElementById('nodes').style.display = 'none';
+}
+
+function nodesData(){
+    document.getElementById('topbar').innerHTML = 'Nodes trend analysis';
+    document.getElementById('layout').style.display = 'none';
+    document.getElementById('link').style.display = 'none';
+    document.getElementById('pipesBox').style.display = 'none';
+    document.getElementById('junctionsBox').style.display = 'none';
+    document.getElementById('coordsBox').style.display = 'none';
+    document.getElementById('ordersForm').style.display = 'none';
+    document.getElementById('CRUD').style.display = 'none';
+    document.getElementById('opsBtn').style.display = 'none';
+    document.getElementById('layoutBtn').style.display = 'none';
+    document.getElementById('ops').style.display = 'none';
+    document.getElementById('settingsPg').style.display = 'none';
+    document.getElementById('ordersBtn').style.display = 'none'; 
+    document.getElementById('nodesBtn').style.display = 'none';
+    document.getElementById('nodes').style.display = 'block';
 }
