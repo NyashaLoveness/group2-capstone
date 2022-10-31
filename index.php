@@ -23,16 +23,15 @@
         <div class='content-cont'>
             <div class='sidebar'>
                 <button class='homeBtn' onclick='showHome()'>Home</button>
-                <button class='workBtn'>Work orders</button>
-                <button class='settingsBtn'>Settings</button>
+                <button class='settingsBtn' onclick='settingsShow()'>Settings</button>
                 <button class='logoutBtn'>Logout</button>
             </div>
 
             <div id='topbar'>Welcome back!</div>
 
-            <!-- <button id='opsBtn' onclick='showOpsData()'>System layout</button> -->
-            <button id='gaugesBtn' onclick='showGauges()'>Pressure gauges</button>
-            <button id='layoutBtn' onclick='showLayout()'>System layout</button>
+            <button id='opsBtn' onclick='opsData()'><img id = 'analytics' src = 'icons8-analytics-58.png'>Operational Data</button>
+            <button id='layoutBtn' onclick='showLayout()'><img id = 'sys' src = 'icons8-imac-settings-50.png'>System Layout</button>
+            <button id='ordersBtn' onclick='ordersPg()'><img id = 'order' src = 'icons8-engineer-64.png'>Work Orders</button>
 
             <div id='layout' style="position: relative; height: 75%;">
                 <iframe title="Hanoi layout" frameborder="0"
@@ -43,22 +42,22 @@
 
             </div>
 
-            <a id = 'link' href="#allTbls" onclick = 'showTbls()'>View tables instead?</a>
+            <a id='link' href="#allTbls" onclick='showTbls()'>View tables instead?</a>
+
 
             <div id='allTbls'>
-                <div id='JnC'>
-                    <div id='junctionsBox' class='content table-responsive"'>
-                        <table id='tblJ' class="table table table-sm table table-hover tblJ">
-                            <thead class="thead-light text-center">
-                                <tr>
-                                    <th scope="col" class='text-center'>ID</th>
-                                    <th scope="col" class='text-center'>Elevation</th>
-                                    <th scope="col" class='text-center'>Demand</th>
-                                    <th scope="col" class='text-center'>Pattern</th>
-                                </tr>
-                            </thead>
-                            <tbody id='table_body4' class='text-center'>
-                                <?php
+                <div id='junctionsBox' class='content table-responsive"'>
+                    <table id='tblJ' class="table table table-sm table table-hover tblJ table-bordered">
+                        <thead class="thead-light text-center">
+                            <tr>
+                                <th scope="col" class='text-center'>ID</th>
+                                <th scope="col" class='text-center'>Elevation</th>
+                                <th scope="col" class='text-center'>Demand</th>
+                                <th scope="col" class='text-center'>Pattern</th>
+                            </tr>
+                        </thead>
+                        <tbody id='table_body4' class='text-center'>
+                            <?php
                                 //Get Heroku ClearDB connection information
                                 // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
                                 // $cleardb_server = $cleardb_url["host"];
@@ -101,21 +100,21 @@
                                     </tr>";
                                 }
                             ?>
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
+                </div>
 
-                    <div id='coordsBox' class='content table-responsive"'>
-                        <table id='tblCoord' class="table table table-sm table table-hover tblCoord">
-                            <thead class="thead-light text-center">
-                                <tr>
-                                    <th scope="col" class='text-center'>Node</th>
-                                    <th scope="col" class='text-center'>X-coordinate</th>
-                                    <th scope="col" class='text-center'>Y-coordinate</th>
-                                </tr>
-                            </thead>
-                            <tbody id='table_body4' class='text-center trow'>
-                                <?php
+                <div id='coordsBox' class='content table-responsive"'>
+                    <table id='tblCoord' class="table table table-sm table table-hover tblCoord table-bordered">
+                        <thead class="thead-light text-center">
+                            <tr>
+                                <th scope="col" class='text-center'>Node</th>
+                                <th scope="col" class='text-center'>X-coordinate</th>
+                                <th scope="col" class='text-center'>Y-coordinate</th>
+                            </tr>
+                        </thead>
+                        <tbody id='table_body4' class='text-center trow'>
+                            <?php
                                 //Get Heroku ClearDB connection information
                                 // $cleardb_url = parse_url(getenv("CLEARDB_DATABASE_URL"));
                                 // $cleardb_server = $cleardb_url["host"];
@@ -157,13 +156,12 @@
                                 </tr>";
                                 }
                             ?>
-                            </tbody>
-                        </table>
-                    </div>
+                        </tbody>
+                    </table>
                 </div>
 
                 <div id='pipesBox' class='content table-responsive"'>
-                    <table id='tbl' class="table table table-sm table table-hover">
+                    <table id='tbl' class="table table table-sm table table-hover table-bordered">
                         <thead id='tblHead' class="thead-light text-center">
                             <tr>
                                 <th scope="col" class='text-center'>ID</th>
@@ -228,6 +226,61 @@
                     </table>
                 </div>
             </div>
+
+            <div id='settingsPg'>
+                <button id='acc'>Account information</button><br>
+                    <button id='profile'>Profile</button><br>
+                    <button id='notifs'>Notifications</button><br>
+                <button id='support' onclick='opsData()'>Support</button><br>
+                <button id='terms' onclick='opsData()'>Terms and privacy</button><br>
+            </div>
+
+            <div id='ordersForm'>
+                <form id='form' action="orders.php" method="POST">
+                    <label for="Job ID">Job ID</label><br>
+                    <input type="text" id="jobID" name='Job ID'><br>
+
+                    <label for="operator">Operator</label><br>
+                    <input type="text" id="operator" name='operator'><br>
+
+                    <label for="date">Date</label><br>
+                    <input type="date" id="date" name='date'><br>
+
+                    <label for="details">Details</label><br>
+                    <input type="text" id="details" name='details'><br>
+
+                    <button type="submit">Add</button>
+                    <button type="cancel">Cancel</button>
+                </form>
+            </div>
+
+            <div id='CRUD'>
+                <table class="ordersTable table table table-sm table table-hover table-bordered">
+                    <thead class="thead-light text-center">
+                        <tr>
+                            <th scope="col" class='text-center'>Job ID</th>
+                            <th scope="col" class='text-center'>Operator</th>
+                            <th scope="col" class='text-center'>Date</th>
+                            <th scope="col" class='text-center'>Details</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <?php 
+                            include 'read.php'; 
+                        ?>
+                    </tbody>
+                </table>
+            </div>
+
+            <div id='ops'>
+                <iframe src="https://mpho-godfrey-nkadimeng.shinyapps.io/capstone/" height='100%' width='100%'
+                    style="border:none;">
+
+                </iframe>
+            </div>
+
+
+
 
 
 

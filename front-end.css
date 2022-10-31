@@ -19,24 +19,26 @@
     margin-top: 2em;
     margin-right: auto;
     margin-left: auto;
+    border-radius: 1.5em;
 }
 
 .sidebar{
     background-color: rgb(29, 29, 32);
     height: 100%;
-    width: 15%
+    width: 15%;
+    border-radius: 1.5em;
 }
 .homeBtn{
     margin-top: 8em;
 }
-.homeBtn, .workBtn, .settingsBtn, .logoutBtn{
+.homeBtn, .settingsBtn, .logoutBtn{
     background-color: rgb(29, 29, 32);
     color: white;
     width: 80%;
     padding: 0.8em;
     margin-bottom: 1em;
     margin-left: 1em;
-    font-size: medium;
+    font-size: 19px;
     font-family: 'Lora', serif;
     border: none;
 }
@@ -48,9 +50,13 @@
     margin-left: 20%;
     font-weight: 600;
     font-size: 40px;
+    margin-right: 6%;
+    border: 1px solid #8A2BE2;
+    border-radius: 0.4em;
+    padding-left: 0.5em;
 }
 
-#layoutBtn, #gaugesBtn{
+#layoutBtn, #opsBtn, #ordersBtn{
     border: none;
     height: 7em;
     width: 12em;
@@ -62,15 +68,22 @@
     border-radius: 1em;
     outline: none;
 }
-#gaugesBtn{
-    margin-left: 25em;
+#opsBtn{
+    margin-left: 30em;
     margin-top: 7em; 
+    font-family: 'Lora', serif;
 }
 #layoutBtn{
     margin-left: 5em;
+    font-family: 'Lora', serif;
+}
+#ordersBtn{
+    margin-left: 37em;
+    margin-top: 2em; 
+    font-family: 'Lora', serif;
 }
 
-#layoutBtn:hover, #gaugesBtn:hover {
+#layoutBtn:hover, #opsBtn:hover, #ordersBtn:hover {
     background-color: rgb(234, 234, 236);
 }
 
@@ -79,44 +92,114 @@
     
 }
 #link{
-    margin-left: 35%;
-}
-
-
-.icon1{
-    height: 3em;
-    width: 3em;
-    padding-left: 2.7em;
+    margin-left: 45%;
 }
 
 #pipesBox{
-    height: 15em;
-    width: 60%;
-    margin-left: 20%;
+    height: 22em;
+    width: 70%;
     overflow-y: auto;
-    margin-top: 2em;
+    margin-top: -22em;
+    margin-left: 67%;
+    font-family: 'Lora', serif;
 }
 #junctionsBox{
-    height: 8em;
-    width: 8em;
-    margin-left: 20%;
+    height: 22em;
+    width: 19em;
     overflow-y: auto;
+    margin-top: 2em;
+    font-family: 'Lora', serif;
 }
 #coordsBox{
-    height: 8em;
-    width: 8em;
-    margin-left: 60%;
-    margin-top: -3em;
+    height: 22em;
+    width: 18em;
+    margin-left: 34%;
+    margin-top: -22em;
     display: inline;
     overflow-y: auto;
+    font-family: 'Lora', serif;
 }
-/* #JnC{
-    height: 20em;
-    width: 20em;
-    display: flex;
-    margin-top: 3em;
+#allTbls{
+    overflow-x: auto;
+    height: 32em;
+    width: 75%;
     margin-left: 20%;
-} */
+}
+
+#ordersForm{
+    margin-top: -30em;
+    margin-left: 20%;
+    width: 15em;
+    font-family: 'Lora', serif;
+}
+
+#CRUD{
+    width: 27em;
+    margin-left: 50%;
+    margin-top: -17em;
+    font-family: 'Lora', serif;
+}
+
+#ops{
+    margin-top: -33em;
+    margin-left: 15%;
+    height: 79%;
+}
+
+#settingsPg{
+    margin-top: -30em;
+    margin-left: 20%;
+    background-color: white;
+    height: 25em;
+    width: 28em;
+}
+
+#acc{
+    margin-top: 1em;
+    width: 25em;
+    height: 3em;
+}
+
+#acc, #notifs, #profile, #support, #terms{
+    border: none 0px;
+    outline: none;
+    margin-left: 1em;
+    border-radius: 1em;
+    font-family: 'Lora', serif;
+    font-weight: 400;
+    font-size: 16px;
+    font-family: 'Lora', serif;
+}
+#support, #terms{
+    margin-top: 2em;
+    width: 25em;
+    height: 3em;
+}
+
+#notifs, #profile{
+    margin-left: 3em;
+    margin-top: 1em;
+    width: 22em;
+    height: 2.5em;
+}
+#acc:hover, #notifs:hover, #profile:hover, #support:hover, #terms:hover{
+    background-color: rgb(230, 230, 233);
+}
+
+#analytics{
+    margin-left: 1.5em;
+    margin-right: 1.3em;
+}
+#sys{
+    margin-left: 2.5em;
+    width: 4em;
+    margin-right: 1.3em; 
+}
+#order{
+    margin-left: 2.6em;
+    width: 5em;
+    margin-right: 1.7em;
+}
 
 ::-webkit-scrollbar {
     width: 2em;  /* Total width including `border-width` of scrollbar thumb */
@@ -127,7 +210,7 @@
     border: 0.7em solid rgba(0, 0, 0, 0);  /* Transparent border together with `background-clip: padding-box` does the trick */
     background-clip: padding-box;
     -webkit-border-radius: 1em;
-    background-color: rgba(235, 231, 231, 0.918);
+    background-color: rgba(0, 0, 0, 0.025);
     -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.025);
 }
 
