@@ -72,6 +72,10 @@
     margin-left: 30em;
     margin-top: 7em; 
     font-family: 'Lora', serif;
+}#ordersBtn{
+    margin-left: 5em;
+    margin-top: 1em; 
+    font-family: 'Lora', serif;
 }
 #nodesBtn{
     margin-left: 5em;
@@ -83,13 +87,9 @@
     font-family: 'Lora', serif;
     margin-top: 1em;
 }
-#ordersBtn{
-    margin-left: 5em;
-    margin-top: 1em; 
-    font-family: 'Lora', serif;
-}
 
-#layoutBtn:hover, #opsBtn:hover, #ordersBtn:hover {
+
+#layoutBtn:hover, #opsBtn:hover, #ordersBtn:hover, #nodesBtn:hover {
     background-color: rgb(234, 234, 236);
 }
 

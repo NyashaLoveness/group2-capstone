@@ -26,7 +26,7 @@ function showHome(){
     document.getElementById('layout').style.display = 'none';
     document.getElementById('topbar').innerHTML = 'Welcome back!';
     document.getElementById('ordersForm').style.display = 'none';
-    document.getElementById('ordersBtn').style.display = 'block';
+    document.getElementById('ordersBtn').style.display = 'inline';
     document.getElementById('settingsPg').style.display = 'none';
     document.getElementById('link').style.display = 'none';
     document.getElementById('ops').style.display = 'none';
