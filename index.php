@@ -23,7 +23,7 @@
         <div class='content-cont'>
             <div class='sidebar'>
                 <button class='homeBtn' onclick='showHome()'>Home</button>
-                <button class='settingsBtn' onclick='settingsShow()'>Settings</button>
+                <button class='settingsBtn' onclick = 'settingsShow()'>Settings</button>
                 <button class='logoutBtn'>Logout</button>
             </div>
 
@@ -34,7 +34,7 @@
             <button id='ordersBtn' onclick='ordersPg()'><img id = 'order' src = 'icons8-engineer-64.png'>Work Orders</button>
 
             <div id='layout' style="position: relative; height: 75%;">
-                <iframe title="Hanoi layout" frameborder="0"
+                <iframe id = 'iframe' title="Hanoi layout" frameborder="0"
                     style="position: absolute; margin-top: 10; left: 20; width: 80%; height: 100%;"
                     src="https://view.genial.ly/63599eea84f06e00183b2ac3" type="text/html" allowscriptaccess="always"
                     allowfullscreen="false" scrolling="no" allownetworking="all">
@@ -249,8 +249,8 @@
                     <label for="details">Details</label><br>
                     <input type="text" id="details" name='details'><br>
 
-                    <button type="submit">Add</button>
-                    <button type="cancel">Cancel</button>
+                    <button id = 'submit' type="submit">Add</button>
+                    <button id = 'cancel' type="cancel">Cancel</button>
                 </form>
             </div>
 

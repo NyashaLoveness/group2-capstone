@@ -9,6 +9,9 @@ window.addEventListener("load", function () {
     document.getElementById('ordersForm').style.display = 'none';
     document.getElementById('link').style.display = 'none';
     document.getElementById('ops').style.display = 'none';
+    document.getElementById('iframe').style.display = 'none';
+    document.getElementById('tblJ').style.display = 'none';
+    document.getElementById('settingsPg').style.display = 'none';
     
 })
 
@@ -24,6 +27,7 @@ function showHome(){
     document.getElementById('ordersBtn').style.display = 'block';
     document.getElementById('settingsPg').style.display = 'none';
     document.getElementById('link').style.display = 'none';
+    document.getElementById('ops').style.display = 'none';
 }
 
 function ordersPg() {
@@ -84,6 +88,7 @@ function settingsShow() {
     document.getElementById('ops').style.display = 'none';
     document.getElementById('ordersForm').style.display = 'none';
     document.getElementById('settingsPg').style.display = 'block';
+    document.getElementById('acc').style.display = 'block';
     
 }   
 
@@ -106,6 +111,7 @@ function showTbls() {
     document.getElementById('junctionsBox').style.display = 'block';
     document.getElementById('coordsBox').style.display = 'block';
     document.getElementById('settingsPg').style.display = 'none';
+    document.getElementById('tblJ').style.display = 'block';
 };
 
 function opsData(){
@@ -121,5 +127,5 @@ function opsData(){
     document.getElementById('layoutBtn').style.display = 'none';
     document.getElementById('ops').style.display = 'block';
     document.getElementById('settingsPg').style.display = 'none';
-    // document.getElementById('coordsBox').style.display = 'block';
+    document.getElementById('ordersBtn').style.display = 'none';
 }
